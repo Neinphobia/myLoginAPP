@@ -1,0 +1,52 @@
+.snake-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .snake {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+  }
+  
+  .snake-cell {
+    width: 20px;
+    height: 20px;
+    background-color: #333333;
+  }
+  
+  .food-cell {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #canvas {
+    background-color: black;
+    border: 2px solid white;
+  }
+  
+  .snake-game {
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .snake-game {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  
