@@ -7,6 +7,13 @@ const ProtectedPage = () => {
 
   const kadi = localStorage.getItem('kadi');
 
+  const handleLogout = () => {
+    // Clear the token from localStorage
+    localStorage.removeItem('token');
+    // Redirect to the login page
+    window.location.replace('/');
+  };
+
   if (!token) {
     return window.location.replace('/');
   }
@@ -22,6 +29,8 @@ const ProtectedPage = () => {
 
       {/* Render the SnakeGame component */}
       <SnakeGame />
+      <hr />
+      <button onClick={handleLogout}  className="logout-button">Logout</button>
     </div>
   );
 };
